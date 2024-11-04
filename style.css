@@ -114,6 +114,17 @@ main {
   height: 10%;
 }
 
+.linkedin-container {
+    background-color: black; /* Fixes color inside this area */
+    position: relative;
+    overflow: hidden; /* Keeps styling contained */
+}
+
+body, html, .linkedin-container {
+    background-color: black !important;
+}
+
+
 
 /* Responsive Adjustments for Animation and Scaling */
 @media (max-width: 1200px) {
