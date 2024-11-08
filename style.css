@@ -123,7 +123,7 @@ main {
   width: 100%;
   max-width: 400px; /* Maximum width of the iframe */
   height: 600px;
-  max-height: 60vh; /* Maximum height as a percentage of viewport height */
+  max-height: 75vh; /* Maximum height as a percentage of viewport height */
   border: none;
 }
 
