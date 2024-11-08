@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navItems = document.querySelectorAll(".nav-item");
   const currentPage = window.location.pathname.split("/").pop();
 
-  // Highlight the active page
+  // Highlights the active page
   navItems.forEach((item) => {
     const page = item.getAttribute("data-page");
     if (page === currentPage) {
@@ -15,17 +15,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Toggle sidebar visibility
+  // Toggles sidebar visibility
   toggleButton.addEventListener("click", () => {
       nav.classList.toggle("active");
   });
 });
 
 
-// Close sidebar if clicked outside
+// Closes sidebar if clicked outside
 document.addEventListener('click', (event) => {
-  // Check if the click was outside the sidebar and toggle button
+  // Checks if the click was outside the sidebar and toggle button
   if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
     sidebar.classList.remove('active'); // Remove the 'active' class to close sidebar
+  }
+});
+
+// Selects the logo and the iframe
+const logo = document.getElementById('chatbot-logo');
+const bot = document.getElementById('bot');
+
+// Adds an event listener to the logo for the click event
+logo.addEventListener('click', () => {
+  // Toggles the visibility of the bot iframe
+  if (bot.style.display === 'none' || bot.style.display === '') {
+    bot.style.display = 'block';  // Show the bot
+  } else {
+    bot.style.display = 'none';   // Hide the bot
   }
 });
