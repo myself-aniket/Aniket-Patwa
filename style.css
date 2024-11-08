@@ -114,6 +114,20 @@ main {
   height: 10%;
 }
 
+/* Make the iframe responsive */
+#bot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 100%;
+  max-width: 400px; /* Maximum width of the iframe */
+  height: 600px;
+  max-height: 60vh; /* Maximum height as a percentage of viewport height */
+  border: none;
+}
+
+
 
 /* Responsive Adjustments for Animation and Scaling */
 @media (max-width: 1200px) {
@@ -163,3 +177,20 @@ main {
 }
 
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #bot {
+    width: 90%;  /* Make the bot take up 90% of the screen width */
+    height: 500px; /* Adjust height for smaller screens */
+    bottom: 10px;  /* Add a little space at the bottom */
+  }
+}
+
+/* Media query for very small screens like mobile portrait */
+@media (max-width: 480px) {
+  #bot {
+    width: 95%;  /* Make the bot take up 95% of the screen width */
+    height: 450px; /* Adjust height for very small screens */
+    bottom: 10px;
+  }
+}
