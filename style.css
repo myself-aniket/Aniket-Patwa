@@ -114,7 +114,20 @@ main {
   height: 10%;
 }
 
-/* Make the iframe responsive */
+/* Makes the logo a rounded circle */
+#chatbot-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;  /* Adjust the size as needed */
+  height: 50px;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+
+/* Makes the iframe responsive */
 #bot {
   position: fixed;
   bottom: 20px;
