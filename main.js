@@ -43,3 +43,12 @@ logo.addEventListener('click', () => {
     bot.style.display = 'none';   // Hide the bot
   }
 });
+
+// Adds an event listener to the document to detect clicks outside the bot iframe
+document.addEventListener('click', (event) => {
+  // Check if the clicked target is not the bot iframe or the logo
+  if (!bot.contains(event.target) && event.target !== logo) {
+    // Hide the bot if the click is outside
+    bot.style.display = 'none';
+  }
+});
